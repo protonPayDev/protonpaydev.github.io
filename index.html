@@ -1,1 +1,125 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proton Pay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <div class="logo"></div>
+            <div class="header-title">Proton Pay</div>
+        </div>
+        <nav class="header-nav">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#cta" class="nav-link">Get Started</a>
+            <a href="signin.html" class="button">Log In</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                  <h1>Democratizing credit approvals</h1>
+                  <p>Allowing merchants to increase their sales by providing financing to their customers.</p>
+                  <div class="input-group">
+                    <input type="email" placeholder="Enter your email" />
+                    <button class="button">Get In Contact</button>
+                  </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/bakery.jpeg" style="width: 700px; height: auto;"/>
+                </div>
+              </div>
+           
+            <div class="logo-bar">
+                <div class="logo">
+                    <img src="logos/citizens.png" style="width: 145px; height: auto;"/>
+                </div>
+                <div class="logo">
+                    <img src="logos/synchrony.png" style="width: 150px; height: auto;"/>
+                </div>
+                <div class="logo">
+                    <img src="logos/visa.png" style="width: 95px; height: auto;"/>
+                </div>
+                <div class="logo">
+                    <img src="logos/wells.png" style="width: 95px; height: auto;"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-image">
+                    <img src="images/dentist_pink.jpeg" alt="Italian Trulli">
+                </div>
+                
+                <div class="feature-content">
+                    <h2>Easy</h2>
+                    <p>Proton Pay is designed to make offering financing incredibly easy for merchants. By using a single, streamlined credit application, merchants don’t have to spend time manually submitting applications to different lenders or tracking multiple responses. Proton Pay handles the process in one step, automatically connecting with multiple lenders to provide a curated list of financing options with various rates. This means merchants can offer their customers more choices quickly and efficiently, all while minimizing their administrative workload and enhancing the overall buying experience. It's a one-stop solution that maximizes convenience and potential conversion rates.</p>
+                    <!-- <a href="#" class="button">Read More</a> -->
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h2>Fast</h2>
+                    <p>Proton Pay is fast for merchants because it consolidates the entire financing process into one seamless step. Instead of spending hours or even days coordinating with multiple lenders, merchants can simply submit a single credit application through Proton Pay. Our system immediately reaches out to a network of lenders and quickly returns a list of approvals with competitive rates. This accelerated process not only saves merchants valuable time but also keeps customers engaged by offering near-instant financing options, which can lead to faster decision-making and higher conversion rates.</p>
+                    <!-- <a href="#" class="button">Read More</a> -->
+                </div>
+                <div class="feature-image">
+                    <img src="images/delivery_driver.jpeg" alt="Italian Trulli">
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is Proton Pay?</div>
+                <div class="faq-answer">
+                    Proton Pay is a real-time matching engine that connects customers with the ideal lender by offering dynamic, waterfall-style lending. This approach maximizes approval rates by tapping into a broad spectrum of financial products, tailored specifically to meet each customer’s unique financing needs.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How does Proton Pay works?</div>
+                <div class="faq-answer">
+                    At checkout, customers complete a secure application that connects them to a network of lenders, offering the best financing options based on their credit profile.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What type of customers can Proton Pay service?</div>
+                <div class="faq-answer">
+                    
+Proton Pay can service a wide range of customers across the credit spectrum, from prime to subprime borrowers. This includes customers with strong credit, those with near-prime credit, and even those with limited or no credit history.
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
